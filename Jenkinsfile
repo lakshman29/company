@@ -1,12 +1,12 @@
 pipeline {
   agent any
   stages {
-    stage('clean') {
+    stage('cf version') {
       steps {
-        bat 'clean mvn'
+        bat 'cf --version'
       }
     }
-    stage('') {
+    stage('error') {
       steps {
         bat 'build'
       }
